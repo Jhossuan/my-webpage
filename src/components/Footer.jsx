@@ -19,17 +19,7 @@ const Footer = () => {
       <small
         style={{ display: "flex", justifyContent: "center", color: "#fff3" }}
       >
-        Florida, Valle del Cauca - Colombia
-      </small>
-      <small
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          color: "#fff3",
-          textAlign: "center",
-        }}
-      >
-        Pagina web y diseño 100% UNICO y ORIGINAL
+        Ultima actualizacion : 20/05/2022 
       </small>
       <Redes>
         <a href={gitHub} target="_blank" without rel="noreferrer">

@@ -170,6 +170,7 @@ const BtnDownload = styled.a`
   &:hover span:after {
   opacity: 4;
   right: 0;
+}
 `;
 
 const Logo = styled.div`
