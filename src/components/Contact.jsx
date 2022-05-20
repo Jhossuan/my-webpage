@@ -60,14 +60,14 @@ const Contact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Your Full Name"
+            placeholder="Tu nombre completo"
             autoComplete="off"
             required
           />
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Tu email"
             autoComplete="off"
             required
           />
@@ -75,38 +75,38 @@ const Contact = () => {
             name="message"
             id=""
             rows="7"
-            placeholder="Your Message"
+            placeholder="Escribe tu mensaje"
             style={{ resize: "none" }}
             required
           />
           <button type="submit" className="btn btn-primary">
-            Send Message
+            Enviar mensaje
           </button>
         </Formulario>
         <TotalDm>
         <Contactos>
-          <a href="mailto:jhossuacamposd86@gmail.com" without rel="noreferrer" target="_blank">
             <MdOutlineMail/>
             <h3>Email</h3>
-            Send a message
+          <a href="mailto:jhossuacamposd86@gmail.com" without rel="noreferrer" target="_blank">
+            Contactame
           </a>
         </Contactos>
         <Contactos>
-          <a href="https://m.me/JhossuaFCD" without rel="noreferrer" target="_blank">
             <RiMessengerLine/>
             <h3>Messenger</h3>
-            Send a message
+          <a href="https://m.me/JhossuaFCD" without rel="noreferrer" target="_blank">
+            Contactame
           </a>
         </Contactos>
         <Contactos>
+          <BsWhatsapp/>
+          <h3>Whatsapp</h3>
           <a
             href="https://api.whatsapp.com/send?phone=573117806075"
             target="_blank"
             without rel="noreferrer"
           >
-            <BsWhatsapp/>
-            <h3>Whatsapp</h3>
-            Send a message
+            Contactame
           </a>
         </Contactos>
         </TotalDm>
@@ -217,7 +217,7 @@ const Contactos = styled.article`
     }
       a{
         color:white;
-        text-decoration:none;
+        text-decoration:underline;
       }
       @media screen and (min-width: 880px){
         display:inline-flex;

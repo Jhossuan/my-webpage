@@ -6,7 +6,6 @@ import {BsGithub, BsLinkedin, BsInstagram} from 'react-icons/bs'
 import { FaTiktok } from 'react-icons/fa'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Swal from 'sweetalert2'
 
 const linkedIn = "https://www.linkedin.com/in/jhossua-campos-d%C3%ADaz-94561a219/";
 const gitHub = 'https://github.com/Jhossuan'
@@ -16,33 +15,17 @@ const tiktok = 'https://vm.tiktok.com/ZTdCCJmhs/'
 
 const Home = () => {
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
-  })
   
-  Toast.fire({
-    icon: 'success',
-    title: 'Bienvenid@, gracias por visitar mi pagina web'
-  })
-
   useEffect(() => {
     AOS.init({duration:600});
   },[]);
-
+  
   return (
     <Container padding='35px'>
       <Cabecera data-aos='zoom-in-down'>
       <Imagen src={Perfil} alt='Foto de perfil'/>
         <p className='descripcion'>
-          Hola, soy Jhossuan👋🏽 <br /> <span>Frontend developer</span> autodidacta. <br /> Apasionado por la web, tecnologia y educación.
+          Hola, soy Jhossuan👋🏽 <br /> <span>Frontend developer</span> autodidacta, colombiano y <br /> Apasionado por la web, tecnologia y educación.
         </p>
       </Cabecera>
       <Redes data-aos='zoom-in-up'>
@@ -77,6 +60,7 @@ const Imagen = styled.img`
   width:15rem;
   border-radius:50%;
   box-shadow:0 0 5px 5px #0005;
+  
   margin:20px 0 30px 0;
   z-index:998;
   @media screen and (min-width: 836px){
