@@ -6,11 +6,23 @@ import {MdOutlineMail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp} from 'react-icons/bs'
 import emailjs from 'emailjs-com'
+import Swal from 'sweetalert2'
 
 const Contact = () => {
 
   const form = useRef()
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -23,7 +35,10 @@ const Contact = () => {
     );
 
     e.target.reset();
-    alert('Muchas gracias, mensaje enviado correctamente...')
+    Toast.fire({
+      icon: 'success',
+      title: 'Muchas gracias por contactarte conmigo🥰'
+    })
 
 
   };

@@ -6,6 +6,7 @@ import {BsGithub, BsLinkedin, BsInstagram} from 'react-icons/bs'
 import { FaTiktok } from 'react-icons/fa'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Swal from 'sweetalert2'
 
 const linkedIn = "https://www.linkedin.com/in/jhossua-campos-d%C3%ADaz-94561a219/";
 const gitHub = 'https://github.com/Jhossuan'
@@ -14,6 +15,23 @@ const tiktok = 'https://vm.tiktok.com/ZTdCCJmhs/'
 
 
 const Home = () => {
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  
+  Toast.fire({
+    icon: 'success',
+    title: 'Bienvenid@, gracias por visitar mi pagina web'
+  })
 
   useEffect(() => {
     AOS.init({duration:600});
