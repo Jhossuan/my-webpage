@@ -11,13 +11,14 @@ import {HiOutlineDocumentDownload} from 'react-icons/hi'
 const data = [
   { id:1, title:'HTML', level: 'Avanzado'},
   { id:2, title:'CSS', level: 'Avanzado'},
-  { id:3, title:'SASS', level: 'Intermedio'},
-  { id:4, title:'BOOTSTRAP', level: 'Aprendiendo'},
-  { id:5, title:'JAVASCRIPT', level: 'Intermedio'},
-  { id:6, title:'REACT.JS', level: 'Intermedio'},
-  { id:7, title:'NEXT.JS', level: 'Aprendiendo'},
-  { id:8, title:'STYLED COMPONENTS', level: 'Intermedio'},
-  { id:9, title:'NODEJS - EXPRESS', level: 'Aprendiendo'}
+  { id:3, title:'SASS', level: 'Avanzado'},
+  { id:4, title:'BOOTSTRAP', level: 'Novato'},
+  { id:5, title:'TAILWIND CSS', level: 'Novato'},
+  { id:6, title:'JAVASCRIPT', level: 'Intermedio'},
+  { id:7, title:'REACT.JS', level: 'Intermedio'},
+  { id:8, title:'NEXT.JS', level: 'Aprendiendo'},
+  { id:9, title:'STYLED COMPONENTS', level: 'Intermedio'},
+  { id:10, title:'NODEJS - EXPRESS', level: 'Aprendiendo'},
 ]
 
 const About = () => {
@@ -48,7 +49,7 @@ const About = () => {
           <h2>Proyectos</h2>
           <p>+10 Proyectos de practica</p>
           <small>
-            Consumiendo APIs, practicando diseños responsives y mucho mas...
+            Capaz de consumir APIs, diseños adaptables, validaciones y mucho mas...
           </small>
         </Targets>
         <Targets>
